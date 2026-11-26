@@ -1,0 +1,397 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+         Header -->
+        <!-- <header class="header">
+            <div class="logo">
+                <div class="logo-icon">₹</div>
+                <div>
+                    <h1>Expense Tracker</h1>
+                    <p>Manage your money smarter.</p>
+                </div>
+            </div>
+
+            <div class="date-display" id="todayDate"></div>
+        </header>
+
+        Welcome Section 
+        <section class="welcome">
+            <div>
+                <h2>Hello, Student! 👋</h2>
+                <p>Here's your monthly financial overview.</p>
+            </div>
+        </section>
+
+        <!- Budget Summary 
+        <section class="summary-grid">
+
+            <div class="summary-card budget-card">
+                <div class="card-top">
+                    <span>Monthly Budget</span>
+                    <span class="card-icon">💰</span>
+                </div>
+                <h2 id="budgetAmount">₹0.00</h2>
+                <p>Your spending limit</p>
+            </div>
+
+            <div class="summary-card spent-card">
+                <div class="card-top">
+                    <span>Total Spent</span>
+                    <span class="card-icon">📉</span>
+                </div>
+                <h2 id="totalSpent">₹0.00</h2>
+                <p>Spent this month</p>
+            </div>
+
+            <div class="summary-card balance-card">
+                <div class="card-top">
+                    <span>Remaining Balance</span>
+                    <span class="card-icon">💵</span>
+                </div>
+                <h2 id="remainingBalance">₹0.00</h2>
+                <p>Money available</p>
+            </div>
+
+        </section>
+
+        < Budget Setting 
+        <section class="panel budget-panel">
+            <div class="section-heading">
+                <div>
+                    <h3>Set Monthly Budget</h3>
+                    <p>Enter the amount you receive each month.</p>
+                </div>
+            </div>
+
+            <form id="budgetForm" class="budget-form">
+                <input
+                    type="number"
+                    id="budgetInput"
+                    placeholder="Enter monthly budget (₹)"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+                <button type="submit" class="primary-btn">
+                    Save Budget
+                </button>
+            </form>
+        </section>
+
+        <!- Add Expense --
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h3>Add New Expense</h3>
+                    <p>Record where your money goes.</p>
+                </div>
+                <span class="heading-icon">✚</span>
+            </div>
+
+            <form id="expenseForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="expenseName">Expense Name</label>
+                        <input
+                            type="text"
+                            id="expenseName"
+                            placeholder="e.g. Lunch, Books"
+                            maxlength="60"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expenseAmount">Amount (₹)</label>
+                        <input
+                            type="number"
+                            id="expenseAmount"
+                            placeholder="e.g. 200"
+                            min="0.01"
+                            step="0.01"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expenseCategory">Category</label>
+                        <select id="expenseCategory" required>
+                            <option value="">Select category</option>
+                            <option value="Food">🍔 Food</option>
+                            <option value="Education">📚 Education</option>
+                            <option value="Transport">🚌 Transport</option>
+                            <option value="Shopping">🛍️ Shopping</option>
+                            <option value="Entertainment">🎬 Entertainment</option>
+                            <option value="Other">📦 Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expenseDate">Date</label>
+                        <input
+                            type="date"
+                            id="expenseDate"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn add-btn">
+                    + Add Expense
+                </button>
+
+            </form>
+        </section>
+
+        <!- Expense History ->
+        <section class="panel history-panel">
+
+            <div class="section-heading">
+                <div>
+                    <h3>Expense History</h3>
+                    <p>All your recorded transactions.</p>
+                </div>
+
+                <span class="transaction-count" id="transactionCount">
+                    0 Transactions
+                </span>
+            </div>
+
+            <div id="expenseList" class="expense-list">
+                <div class="empty-state">
+                    <div class="empty-icon">🧾</div>
+                    <h3>No expenses yet</h3>
+                    <p>Add your first expense to get started!</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!- Footer ->
+        <footer>
+            <p>Student Expense Tracker © 2026</p>
+            <p>Made to help you spend wisely. 💚</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div>
+                <p class="eyebrow">PERSONAL FINANCE</p>
+                <h1>Student Expense Tracker</h1>
+                <p>Manage your money, expenses and savings.</p>
+            </div>
+        </header>
+
+        <section class="summary-grid">
+            <div class="summary-card">
+                <p>Monthly Budget</p>
+                <h2 id="budgetAmount">₹0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Available Balance</p>
+                <h2 id="availableBalance">₹0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Spent This Month</p>
+                <h2 id="totalSpent">₹0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Received</p>
+                <h2 id="totalReceived">₹0</h2>
+            </div>
+
+            <div class="summary-card savings-summary">
+                <p>Total Savings</p>
+                <h2 id="savingsBalance">₹0</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Set Monthly Budget</h2>
+            <form id="budgetForm" class="form-row">
+                <input type="number" id="budgetInput"
+                    placeholder="Enter monthly budget" min="0.01"
+                    step="0.01" required>
+                <button type="submit">Save Budget</button>
+            </form>
+        </section>
+
+        <section class="action-grid">
+
+            <div class="panel income-card">
+                <h2>➕ Add Money</h2>
+                <p class="description">Record money you receive.</p>
+
+                <form id="addMoneyForm">
+                    <label for="incomeAmount">Amount (₹)</label>
+                    <input type="number" id="incomeAmount"
+                        placeholder="Enter amount" min="0.01"
+                        step="0.01" required>
+
+                    <label for="incomeSource">Source</label>
+                    <select id="incomeSource" required>
+                        <option value="">Select source</option>
+                        <option>Parents</option>
+                        <option>Pocket Money</option>
+                        <option>Scholarship</option>
+                        <option>Part-time Job</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label for="incomeDate">Date</label>
+                    <input type="date" id="incomeDate" required>
+
+                    <button type="submit">Add Money</button>
+                </form>
+            </div>
+
+            <div class="panel savings-card">
+                <h2>🐷 Add Savings</h2>
+                <p class="description">
+                    Transfer money from your available balance to savings.
+                </p>
+
+                <form id="savingsForm">
+                    <label for="savingsAmount">Amount (₹)</label>
+                    <input type="number" id="savingsAmount"
+                        placeholder="Enter amount" min="0.01"
+                        step="0.01" required>
+
+                    <label for="savingsNote">Savings Goal</label>
+                    <input type="text" id="savingsNote"
+                        placeholder="e.g. New Laptop" required>
+
+                    <button type="submit">Save Money</button>
+                </form>
+            </div>
+
+            <div class="panel withdraw-card">
+                <h2>↩ Withdraw Savings</h2>
+                <p class="description">
+                    Move your savings back to available balance.
+                </p>
+
+                <form id="withdrawForm">
+                    <label for="withdrawAmount">Amount (₹)</label>
+                    <input type="number" id="withdrawAmount"
+                        placeholder="Enter amount" min="0.01"
+                        step="0.01" required>
+
+                    <button type="submit">Withdraw Money</button>
+                </form>
+            </div>
+
+        </section>
+
+        <section class="panel">
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm" class="expense-form">
+                <div>
+                    <label for="expenseName">Expense Name</label>
+                    <input type="text" id="expenseName"
+                        placeholder="e.g. Lunch" required>
+                </div>
+
+                <div>
+                    <label for="expenseAmount">Amount (₹)</label>
+                    <input type="number" id="expenseAmount"
+                        placeholder="Enter amount" min="0.01"
+                        step="0.01" required>
+                </div>
+
+                <div>
+                    <label for="expenseCategory">Category</label>
+                    <select id="expenseCategory" required>
+                        <option value="">Select category</option>
+                        <option>Food</option>
+                        <option>Transport</option>
+                        <option>Education</option>
+                        <option>Shopping</option>
+                        <option>Health</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="expenseDate">Date</label>
+                    <input type="date" id="expenseDate" required>
+                </div>
+
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Expense History</h2>
+                    <p class="description">
+                        <span id="transactionCount">0</span> transactions
+                    </p>
+                </div>
+            </div>
+
+            <div id="expenseList" class="expense-list">
+                <p class="empty-message">No expenses added yet.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Income History</h2>
+            <div id="incomeList" class="record-list">
+                <p class="empty-message">No income recorded yet.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Savings History</h2>
+            <div id="savingsList" class="record-list">
+                <p class="empty-message">No savings recorded yet.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Student Expense Tracker · Manage your money wisely.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

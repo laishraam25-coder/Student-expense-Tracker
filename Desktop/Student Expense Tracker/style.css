@@ -1,0 +1,323 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+    color: #202938;
+    padding: 30px 16px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #16a085;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.header p:last-child,
+.description {
+    color: #778194;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    border: 1px solid #e9edf3;
+}
+
+.summary-card p {
+    color: #778194;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.summary-card h2 {
+    font-size: 25px;
+    color: #202938;
+    overflow-wrap: anywhere;
+}
+
+.summary-card:nth-child(2) h2 {
+    color: #15966f;
+}
+
+.savings-summary h2 {
+    color: #805ad5;
+}
+
+.panel {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #e9edf3;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.03);
+}
+
+.panel h2 {
+    font-size: 19px;
+    margin-bottom: 17px;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.action-grid .panel {
+    margin-bottom: 22px;
+}
+
+.income-card {
+    border-top: 4px solid #16a085;
+}
+
+.savings-card {
+    border-top: 4px solid #805ad5;
+}
+
+.withdraw-card {
+    border-top: 4px solid #e09b35;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce1e9;
+    border-radius: 7px;
+    font-size: 14px;
+    background: white;
+    color: #202938;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #16a085;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #465164;
+}
+
+button {
+    background: #137e68;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #0e6655;
+}
+
+.form-row input {
+    margin: 0;
+}
+
+.form-row button {
+    white-space: nowrap;
+}
+
+.action-grid button {
+    width: 100%;
+}
+
+.savings-card button {
+    background: #805ad5;
+}
+
+.savings-card button:hover {
+    background: #6844b6;
+}
+
+.withdraw-card button {
+    background: #c17c20;
+}
+
+.withdraw-card button:hover {
+    background: #a36516;
+}
+
+.expense-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 16px;
+    align-items: end;
+}
+
+.expense-form button {
+    grid-column: 1 / -1;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-item,
+.record-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.expense-item:last-child,
+.record-item:last-child {
+    border-bottom: none;
+}
+
+.item-info h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    font-size: 12px;
+    color: #8892a2;
+}
+
+.item-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-right strong {
+    white-space: nowrap;
+}
+
+.delete-btn {
+    background: #fff0f0;
+    color: #d33;
+    padding: 8px 10px;
+}
+
+.delete-btn:hover {
+    background: #ffe0e0;
+}
+
+.empty-message {
+    color: #9099a8;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+footer {
+    text-align: center;
+    color: #9099a8;
+    font-size: 13px;
+    padding: 15px;
+}
+
+@media (max-width: 850px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .action-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .action-grid .withdraw-card {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 22px 12px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .summary-grid,
+    .action-grid,
+    .expense-form {
+        grid-template-columns: 1fr;
+    }
+
+    .action-grid .withdraw-card {
+        grid-column: auto;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .summary-card h2 {
+        font-size: 23px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row button {
+        width: 100%;
+    }
+
+    .item-right {
+        gap: 7px;
+    }
+
+    .expense-item,
+    .record-item {
+        align-items: flex-start;
+    }
+}
